@@ -1,0 +1,38 @@
+<svg width="280" height="60" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for icon -->
+  <circle cx="30" cy="30" r="25" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  
+  <!-- Book/Learning icon -->
+  <g transform="translate(18, 18)">
+    <!-- Open book -->
+    <path d="M2 6 C2 5.4 2.4 5 3 5 L11 5 C11.6 5 12 5.4 12 6 L12 18 C12 18.6 11.6 19 11 19 L3 19 C2.4 19 2 18.6 2 18 Z" fill="white" opacity="0.9"/>
+    <path d="M12 6 C12 5.4 12.4 5 13 5 L21 5 C21.6 5 22 5.4 22 6 L22 18 C22 18.6 21.6 19 21 19 L13 19 C12.4 19 12 18.6 12 18 Z" fill="white" opacity="0.9"/>
+    
+    <!-- Book spine -->
+    <line x1="12" y1="5" x2="12" y2="19" stroke="#1d4ed8" stroke-width="1"/>
+    
+    <!-- Pages/lines -->
+    <line x1="4" y1="8" x2="10" y2="8" stroke="#2563eb" stroke-width="0.5"/>
+    <line x1="4" y1="10" x2="10" y2="10" stroke="#2563eb" stroke-width="0.5"/>
+    <line x1="4" y1="12" x2="10" y2="12" stroke="#2563eb" stroke-width="0.5"/>
+    <line x1="14" y1="8" x2="20" y2="8" stroke="#2563eb" stroke-width="0.5"/>
+    <line x1="14" y1="10" x2="20" y2="10" stroke="#2563eb" stroke-width="0.5"/>
+    <line x1="14" y1="12" x2="20" y2="12" stroke="#2563eb" stroke-width="0.5"/>
+    
+    <!-- Flow arrow -->
+    <path d="M8 15 L16 15 M14 13 L16 15 L14 17" stroke="#60a5fa" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- LearnFlow text -->
+  <g transform="translate(70, 15)">
+    <!-- Learn text -->
+    <text x="0" y="20" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Learn</text>
+    
+    <!-- Flow text -->
+    <text x="0" y="40" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#2563eb">Flow</text>
+    
+    <!-- Tagline -->
+    <text x="80" y="25" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" fill="#6b7280">Learning Management</text>
+    <text x="80" y="35" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" fill="#6b7280">System</text>
+  </g>
+</svg>

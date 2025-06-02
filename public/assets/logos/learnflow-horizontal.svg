@@ -1,0 +1,32 @@
+<svg width="220" height="40" viewBox="0 0 220 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon -->
+  <circle cx="20" cy="20" r="16" fill="#2563eb" stroke="#1d4ed8" stroke-width="1"/>
+  
+  <!-- Book icon -->
+  <g transform="translate(12, 12)">
+    <!-- Open book -->
+    <path d="M1 4 C1 3.4 1.4 3 2 3 L7 3 C7.6 3 8 3.4 8 4 L8 12 C8 12.6 7.6 13 7 13 L2 13 C1.4 13 1 12.6 1 12 Z" fill="white" opacity="0.9"/>
+    <path d="M8 4 C8 3.4 8.4 3 9 3 L14 3 C14.6 3 15 3.4 15 4 L15 12 C15 12.6 14.6 13 14 13 L9 13 C8.4 13 8 12.6 8 12 Z" fill="white" opacity="0.9"/>
+    
+    <!-- Book spine -->
+    <line x1="8" y1="3" x2="8" y2="13" stroke="#1d4ed8" stroke-width="0.5"/>
+    
+    <!-- Pages -->
+    <line x1="2.5" y1="5.5" x2="6.5" y2="5.5" stroke="#2563eb" stroke-width="0.3"/>
+    <line x1="2.5" y1="7" x2="6.5" y2="7" stroke="#2563eb" stroke-width="0.3"/>
+    <line x1="2.5" y1="8.5" x2="6.5" y2="8.5" stroke="#2563eb" stroke-width="0.3"/>
+    <line x1="9.5" y1="5.5" x2="13.5" y2="5.5" stroke="#2563eb" stroke-width="0.3"/>
+    <line x1="9.5" y1="7" x2="13.5" y2="7" stroke="#2563eb" stroke-width="0.3"/>
+    <line x1="9.5" y1="8.5" x2="13.5" y2="8.5" stroke="#2563eb" stroke-width="0.3"/>
+    
+    <!-- Flow arrow -->
+    <path d="M5 10 L11 10 M9.5 8.5 L11 10 L9.5 11.5" stroke="#60a5fa" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(45, 8)">
+    <text x="0" y="16" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1f2937">Learn</text>
+    <text x="65" y="16" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#2563eb">Flow</text>
+    <text x="0" y="28" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="400" fill="#6b7280">Learning Management System</text>
+  </g>
+</svg>

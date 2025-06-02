@@ -1,0 +1,107 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function getUserRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+    
+    function isAdmin() {
+      return getUserRole() == 'admin';
+    }
+    
+    function isInstructor() {
+      return getUserRole() == 'instructor';
+    }
+    
+    function isStudent() {
+      return getUserRole() == 'student';
+    }
+    
+    function isInstructorOrAdmin() {
+      return isInstructor() || isAdmin();
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isOwner(userId);
+      allow update: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      allow delete: if isAdmin();
+    }
+
+    // Courses collection
+    match /courses/{courseId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isInstructorOrAdmin();
+      allow update: if isAuthenticated() && (
+        isAdmin() || 
+        (isInstructor() && resource.data.instructorId == request.auth.uid)
+      );
+      allow delete: if isAuthenticated() && (
+        isAdmin() || 
+        (isInstructor() && resource.data.instructorId == request.auth.uid)
+      );
+    }
+
+    // Modules collection
+    match /modules/{moduleId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAuthenticated() && isInstructorOrAdmin();
+    }
+
+    // Lessons collection
+    match /lessons/{lessonId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAuthenticated() && isInstructorOrAdmin();
+    }
+
+    // Quizzes collection
+    match /quizzes/{quizId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAuthenticated() && isInstructorOrAdmin();
+    }
+
+    // Comments collection
+    match /comments/{commentId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (
+        isOwner(resource.data.userId) || isInstructorOrAdmin()
+      );
+    }
+
+    // User-specific data
+    match /users/{userId}/enrollments/{enrollmentId} {
+      allow read, write: if isAuthenticated() && (isOwner(userId) || isInstructorOrAdmin());
+    }
+
+    match /users/{userId}/quizAttempts/{attemptId} {
+      allow read, write: if isAuthenticated() && (isOwner(userId) || isInstructorOrAdmin());
+    }
+
+    match /users/{userId}/progress/{progressId} {
+      allow read, write: if isAuthenticated() && (isOwner(userId) || isInstructorOrAdmin());
+    }
+
+    // Analytics and reports (admin only)
+    match /analytics/{document=**} {
+      allow read, write: if isAuthenticated() && isAdmin();
+    }
+
+    // System settings (admin only)
+    match /settings/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && isAdmin();
+    }
+  }
+}

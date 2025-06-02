@@ -1,0 +1,104 @@
+MIT License
+
+Copyright (c) 2024 Hrishikesh Mohite
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+ADDITIONAL TERMS FOR COMMERCIAL USE
+
+While this software is licensed under the MIT License, we kindly request that
+commercial deployments include proper attribution to the LearnFlow project.
+
+ATTRIBUTION REQUIREMENTS FOR COMMERCIAL USE:
+1. Include "Powered by LearnFlow" in your application footer or about page
+2. Link back to the original LearnFlow repository
+3. Maintain the copyright notice in the source code
+4. Consider contributing improvements back to the open source project
+
+TRADEMARK NOTICE:
+The "LearnFlow" name and logo are trademarks of Hrishikesh Mohite. While you
+may use the software under the MIT License, the use of the LearnFlow trademark
+requires explicit permission. For commercial use, please consider:
+- Using your own branding and logo
+- Obtaining a commercial license for trademark use
+- Contributing to the project development
+
+For commercial licensing inquiries or trademark usage permissions, please
+contact: hrishikeshmohite001@gmail.com
+
+DISCLAIMER:
+This software is provided for educational and demonstration purposes. While
+suitable for production use, please ensure proper security audits and testing
+before deploying in critical environments.
+
+================================================================================
+
+THIRD-PARTY LICENSES
+
+This project includes or depends on the following third-party software:
+
+React (MIT License)
+Copyright (c) Facebook, Inc. and its affiliates.
+
+Firebase SDK (Apache License 2.0)
+Copyright (c) Google Inc.
+
+Tailwind CSS (MIT License)
+Copyright (c) Tailwind Labs, Inc.
+
+Lucide React (ISC License)
+Copyright (c) Lucide Contributors
+
+Vite (MIT License)
+Copyright (c) 2019-present, Yuxi (Evan) You and Vite contributors
+
+Google Generative AI SDK (Apache License 2.0)
+Copyright (c) Google LLC
+
+All third-party licenses are included in their respective packages and must
+be maintained in any distribution of this software.
+
+================================================================================
+
+CONTRIBUTION GUIDELINES
+
+By contributing to this project, you agree that your contributions will be
+licensed under the same MIT License. Contributors retain copyright to their
+contributions while granting the project maintainers the right to use,
+modify, and distribute the contributions under the project license.
+
+For more information about contributing, please see CONTRIBUTING.md
+
+================================================================================
+
+SUPPORT AND WARRANTY
+
+This software is provided "as is" without warranty of any kind. The authors
+and contributors are not responsible for any damages or issues arising from
+the use of this software. For support, please refer to:
+
+- GitHub Issues: For bug reports and feature requests
+- Documentation: README.md and project documentation
+- Community: GitHub Discussions for general questions
+
+================================================================================
+
+Last updated: December 2024
